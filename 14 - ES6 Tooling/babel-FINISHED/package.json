@@ -4,13 +4,16 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "babel": "babel app.js --watch --out-file app-compiled.js"
+    "babel": "babel app.js --watch --out-file app-compiled.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^7.0.0-beta.1",
-    "babel-preset-env": "^2.0.0-beta.1"
+    "babel-preset-env": "^2.0.0-beta.1",
+    "snyk": "^1.316.1"
   },
   "babel": {
     "presets": [
@@ -32,5 +35,6 @@
   },
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.26.0"
-  }
+  },
+  "snyk": true
 }
