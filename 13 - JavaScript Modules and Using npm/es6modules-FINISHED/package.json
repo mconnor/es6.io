@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "webpack --progress --watch"
+    "build": "webpack --progress --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -16,12 +18,14 @@
     "jsonp": "^0.2.0",
     "lodash": "^4.13.1",
     "md5": "^2.1.0",
-    "slug": "^0.9.1"
+    "slug": "^0.9.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015-native-modules": "^6.6.0",
     "webpack": "^2.1.0-beta.15"
-  }
+  },
+  "snyk": true
 }
